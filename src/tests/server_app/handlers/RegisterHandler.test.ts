@@ -16,7 +16,7 @@ jest.mock('../../../app/server_app/utils/Utils', () => ({
 describe('register handler test suite', () => {
 	let sut: RegisterHandler;
 
-	const request = {
+	const request: { method: HTTP_METHODS | undefined } = {
 		method: undefined,
 	};
 	const responseMock = {

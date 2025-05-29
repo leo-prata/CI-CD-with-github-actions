@@ -59,7 +59,7 @@ describe('Database test suite', () => {
 		await sut.update(id, 'color', expectedColor);
 		const object = await sut.getBy('id', id);
 
-		expect(object.color).toBe(expectedColor);
+		expect(object?.color).toBe(expectedColor);
 	});
 
 	it('should delete the object', async () => {
