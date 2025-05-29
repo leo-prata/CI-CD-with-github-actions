@@ -6,7 +6,8 @@
 		"test": "jest",
 		"itest": "jest --config itest.config.ts",
 		"start": "ts-node src/app/server_app/Launcher.ts",
-		"lint": "eslint --fix --ext .ts"
+		"lint": "eslint --fix --ext .ts",
+		"build": "tsc --project tsconfig.json"
 	},
 	"keywords": [],
 	"author": "",

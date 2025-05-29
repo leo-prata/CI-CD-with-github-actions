@@ -56,7 +56,7 @@ export class Server {
 				default:
 					break;
 			}
-		} catch (error) {
+		} catch (error: any) {
 			response.writeHead(
 				HTTP_CODES.INTERNAL_SERVER_ERROR,
 				JSON.stringify(`Internal server error: ${error.message}`)
@@ -76,7 +76,7 @@ export class Server {
 		if (this.server) {
 			console.log('closing server');
 			return new Promise<void>((resolve, reject) => {
-				this.server.close((err) => {
+				this.server?.close((err) => {
 					if (err) {
 						reject(err);
 					} else {
